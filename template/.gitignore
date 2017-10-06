@@ -14,7 +14,19 @@ selenium-debug.log
 
 # Editor directories and files
 .idea
+.vscode
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+
+### Django ###
+*.log
+*.mo  # Translation files
+*.pot
+*.py[cod]
+__pycache__/
+.env
+db.sqlite3
+public
+requirements.txt
