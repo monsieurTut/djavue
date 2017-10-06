@@ -19,3 +19,14 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+
+### Django ###
+*.log
+*.mo  # Translation files
+*.pot
+*.py[cod]
+__pycache__/
+.env
+db.sqlite3
+public
+requirements.txt
