@@ -2,3 +2,4 @@ dj-database-url
 Django
 django-environ
 pip-tools
+psycopg2

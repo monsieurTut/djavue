@@ -8,8 +8,8 @@ CONTENT = "{% load staticfiles %}"
 PATH = "templates/index.html"
 FILE = open(PATH, "r")
 for line in FILE:
-    CONTENT += re.sub(r'(href|src)=/static/(css|js)/(app|manifest|vendor)\.(\w+)\.(css|js)',
-                      r'\1="{% static "\2/\3.\4.\5" %}"',
+    CONTENT += re.sub(r'(href|src)=/generated/(css|js)/(app|manifest|vendor)\.(\w+)\.(css|js)',
+                      r'\1="{% static "generated/\2/\3.\4.\5" %}"',
                       line)
 FILE.close()
 
