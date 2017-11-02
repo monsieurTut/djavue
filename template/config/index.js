@@ -28,7 +28,11 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // Redirect API request to django development server
+      // Here REST API is at 'http://localhost:8000/api/
+      '/api': {target: 'http://localhost:8000'}
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
