@@ -16,13 +16,38 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 ``` bash
 $ npm install -g vue-cli
 $ vue init monsieurTut/djavue my-project
-$ cd my-project
+```
+
+### Create a virtualenv for the project
+
+Considering you use pew to manage virtual environments:
+
+``` bash
+$ pew new -p /usr/bin/python3 -a /path/to/my-project my-project
+$ pip install pip-tools
+$ pip-compile
+$ pip-sync
+```
+
+### Database and Django configuration
+
+```
+DEBUG=on
+SECRET_KEY=secretkey
+DATABASE_URL=postgres://username:password@localhost/dbname
+```
+
+### Install node packages
+
+``` bash
 $ npm install
 $ npm run dev
 $ python manage.py runserver
 ```
 
 If port 8080 is already in use on your machine you must change the port number in `/config/index.js`. Otherwise `npm run dev` will fail.
+
+
 
 ## What's Included
 
@@ -58,3 +83,6 @@ You can fork this repo to create your own boilerplate, and use it with `vue-cli`
 ``` bash
 vue init username/repo my-project
 ```
+
+
+
