@@ -31,7 +31,10 @@ module.exports = {
     proxyTable: {
       // Redirect API request to django development server
       // Here REST API is at 'http://localhost:8000/api/
-      '/api': {target: 'http://localhost:8000'}
+      '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true // Avoid rewriting files url (e.g. images)
+      }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
